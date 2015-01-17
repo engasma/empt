@@ -1,0 +1,57 @@
+<HTML>
+
+	<HEAD>
+		<link rel="stylesheet" media="all" href="http://www.nwf.org/common/css/kids/default.css">
+ 
+		<script>
+			
+			var mywin;
+			function openwin_1()
+				{
+					mywin=window.open('calc.html','','width=800,height=500');
+					mywin.moveTo(350,100);
+				}
+				
+				function openwin_3()
+				{
+					mywin=window.open('memorynum.html','','width=800,height=500');
+					mywin.moveTo(350,100);
+				}
+		</script>
+	</HEAD>
+	<body bgcolor="white" onload="timerID=setInterval('lightingMarbles()',500)" ><!--onmousedown="clearInterval(timerID)"-->
+		<BR><BR><BR><BR><BR>
+ 
+		<CENTER>
+ 
+		<TABLE>
+
+			<TR VALIGN="top" ALIGN="center">
+				<TD>
+
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<br><br><br>
+				
+						<a href="#" onclick="setTimeout(openwin_1(),3000);return false;"> <img src ="3.jpg"  width="200" height="200"   ></a>
+ 
+ 
+			
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					
+					<a href="#" onclick="setTimeout(openwin_3(),3000);return false;"> <img src ="4.png"  width="200" height="200"   ></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					
+					<div id="a"></div>
+				</TD>
+			</TR>
+		</TABLE>
+ 
+		</CENTER>
+		
+	</BODY>
+</HTML>
+
+
+
+

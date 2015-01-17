@@ -1,0 +1,68 @@
+<html>
+
+	<head>
+
+		<link rel="stylesheet" media="all" href="http://www.nwf.org/common/css/kids/default.css">
+
+		<script>
+			var num;
+
+			function txtfocused(txt)
+				{
+					if(txt.value=="Enter user name")
+						txt.value="";
+					else 
+						{
+							document.getElementById("t1").focus();
+							//	document.getElementById("t1").select();
+						}
+				}
+
+			function txtfocused2(txt)
+				{
+	
+					txt.value="";
+				}
+
+			function testname()
+				{
+					var name=document.getElementById("t1").value;                   
+					var regname=/^([A-Z]{4,})$/ig;
+					num=regname.test(name);
+					if(num==0)
+						{
+							document.getElementById("t1").focus();
+							document.getElementById("s1").innerHTML="<font color='red'>Invalid user name</font>";
+							document.getElementById("b1").disabled = true;
+						}
+					else
+						{
+		
+							document.getElementById("s1").innerHTML="";
+							document.getElementById("t2").focus();
+							document.getElementById("b1").disabled = false;
+						}
+				}
+				
+		</script>
+
+		
+	</head>
+
+	<body>
+			<form action="website.html" method ="get">
+			</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+			user name <input type="text" value="Enter user name" id="t1" name="t1" onblur="testname()" onfocus="txtfocused(this)"/>
+			<span id="s1"> </span>
+			<br/>
+			Password  <input type="password"  id="t2" value="enter password" name="t2" onfocus="txtfocused2(this)"/>
+			<span id="s2"> </span>
+			<br/><br/>
+			<input type="submit" value="Login" id="b1" disabled />
+		</form>
+
+		
+
+	</body>
+
+</html>
